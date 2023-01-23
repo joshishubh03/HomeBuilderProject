@@ -5,6 +5,17 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 const Post = () => {
   const {posts} =  useSelector((state)=>state.Post.value);
+  
+
+  const change=()=>{
+    alert(
+      "here"
+    );
+    document.getElementById("like").style.backgroundColor="red";
+    
+  }
+  
+  
     return (
       <main>
   <div className="myContainer">
@@ -58,9 +69,10 @@ const Post = () => {
         <div className="bottom">
           <div className="actionBtns">
             <div className="left">
-              <span className="heart" onclick="addlike()">
+              <span className="heart" >
                 <span>
-                  <svg aria-label="Like" color="#262626" fill="#262626" height={24} role="img" viewBox="0 0 48 48" width={24}>
+                
+                  <svg aria-label="Like"  id="like" color="#262626" fill="#262626" height={24} role="img" viewBox="0 0 48 48" width={24}  onClick={change} >
                     {/* Coordinate path */}
                     <path d="M34.6 6.1c5.7 0 10.4 5.2 10.4
 												11.5 0 6.8-5.9 11-11.5 16S25 41.3 24
@@ -78,7 +90,7 @@ const Post = () => {
                   </svg>
                 </span>
               </span>
-              <svg aria-label="Comment" className="_8-yf5 " color="#262626" fill="#262626" height={24} role="img" viewBox="0 0 48 48" width={24}>
+              <svg aria-label="Comment" className="_8-yf5 " color="#262626" fill="#262626" height={24} role="img" viewBox="0 0 48 48" width={24} >
                 {/* Coordinate path */}
                 <path clipRule="evenodd" d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5
 										11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0
